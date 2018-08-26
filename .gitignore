@@ -1,0 +1,4 @@
+accessKeys.csv
+node_modules/
+.dynamodb/
+.serverless/

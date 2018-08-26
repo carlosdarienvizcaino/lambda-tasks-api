@@ -1,0 +1,25 @@
+
+1. Desing Tasks API
+
+2. Create a lambda to READ a list of Tasks
+    Create an AWS account
+    Create an IAM user
+    Install pip
+    Install aws-cli
+    Install aws-sam-cli
+    Deploy getTask lambda
+
+3. Create an API Gateway
+
+4. Create a lambda to CREATE a task and added to the existing list
+
+5. Create a lambda to UPDATE an exisiting task 
+
+6. Create a lambda to DELETE an existing task
+
+7. Performance
+    Create a write index: taskId
+    Create two read index: userEmail, priority, deleted and userEmail, deleted
+
+
+

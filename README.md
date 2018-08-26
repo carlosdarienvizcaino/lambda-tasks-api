@@ -1,2 +1,2 @@
 # lambda-tasks-api
-Exploring Serverless 
+Exploring Serveless
