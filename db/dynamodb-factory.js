@@ -8,7 +8,7 @@ function createDynamoDbInstance() {
     if (IS_OFFLINE === 'true') {
         dynamoDb = new AWS.DynamoDB.DocumentClient({
             region: 'localhost',
-            endpoint: 'http://localhost:8000'
+            endpoint: 'http://localhost:8002'
         });
     } else {
         dynamoDb = new AWS.DynamoDB.DocumentClient();
