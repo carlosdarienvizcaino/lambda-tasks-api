@@ -21,20 +21,25 @@ module.exports.getTasks = (event, context, callback) => {
   });
 };
 
+// TODO: Understand DynamoDb to query db documents by userEmail, priority, completed
 function getQueryParameters(event) {
 
   let taskId = event.queryStringParameters.taskId;
-  let userEmail = event.queryStringParameters.userEmail;
-  let priority = event.queryStringParameters.priority;
+  // let userEmail = event.queryStringParameters.userEmail;
+  // let priority = event.queryStringParameters.priority;
+  // let completed = event.queryStringParameters.completed;
   
   let queryKeys = {};
   if(taskId) queryKeys.taskId = taskId;
-  //if(userEmail) queryKeys.userEmail = userEmail;
-  //if(priority) queryKeys.priority = priority;
+  // if(userEmail) queryKeys.userEmail = userEmail;
+  // if(priority) queryKeys.priority = priority;
+  // if(completed) queryKeys.completed = completed;
 
   return  {
     TableName: USERS_TABLE,
-    Key: queryKeys,
+    Key: {
+      taskId: taskId,
+    },
   }
 }
   

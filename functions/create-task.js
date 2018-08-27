@@ -4,16 +4,15 @@ const USERS_TABLE = process.env.USERS_TABLE;
 
 module.exports.createTask = (event, context, callback) => {
     
-    // Validate request body
+    // TODO: validate request body
     let taskRequestBody = JSON.parse(event.body);
     let userEmail = taskRequestBody.userEmail
     let description  = taskRequestBody.description;
     let priority = taskRequestBody.priority;
-    let isTaskCompleted = taskRequestBody.completed;
+    let completed = taskRequestBody.completed;
     
     let taskId = uuidv1();
     taskRequestBody.taskId = taskId;
-    let completed = (isTaskCompleted === true) ? new Date() :  null;
     taskRequestBody.completed = completed;
     
     const params = {

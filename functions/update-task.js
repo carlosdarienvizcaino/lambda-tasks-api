@@ -10,10 +10,7 @@ module.exports.updateTask = (event, context, callback) => {
     let userEmail = taskRequestBody.userEmail;
     let description  = taskRequestBody.description;
     let priority = taskRequestBody.priority;
-    let isTaskCompleted = taskRequestBody.completed;
-    
-    let completed = isTaskCompleted === true ? new Date() : null
-    taskRequestBody.completed = completed;
+    let completed = taskRequestBody.completed;
 
     // TODO: Don't update completed if the request complete is false
     const params = {
