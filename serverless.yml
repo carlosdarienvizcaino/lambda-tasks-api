@@ -77,7 +77,7 @@ functions:
   tasks-notifier:
     handler: functions/task-notifier.notifyUser
     events:
-      - schedule: rate(1 minute)
+      - schedule: rate(1 day)
 
 
 plugins:
